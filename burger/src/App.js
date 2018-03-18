@@ -6,6 +6,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Hi, react app</h1>
+        <p>this is really working</p>
       </div>
     );
     /*return React.createElement('div', {className: 'App'}, React.createElement('h1', '', 'now it works'));*/
