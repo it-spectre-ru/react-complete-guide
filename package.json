@@ -1,0 +1,23 @@
+{
+  "name": "react-complete-guide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/it-spectre-ru/react-complete-guide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/it-spectre-ru/react-complete-guide/issues"
+  },
+  "homepage": "https://github.com/it-spectre-ru/react-complete-guide#readme",
+  "dependencies": {
+    "create-react-app": "^1.5.2"
+  }
+}
