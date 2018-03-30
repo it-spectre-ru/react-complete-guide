@@ -3,7 +3,8 @@ import classesCss from './App.css';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
 
-import WithClass from '../hoc/WithClass';
+import Aux from '../hoc/Auxiliary';
+import withClass from '../hoc/withClass'
 
 class App extends PureComponent {
   constructor(props) {
@@ -93,19 +94,22 @@ class App extends PureComponent {
     }
 
     return (
-        <WithClass classes={classesCss.App}>
-          <button onClick={() => {this.setState({showPersons: true})}}>show person</button>
+        <Aux>
+          <button onClick={() => {
+            this.setState({showPersons: true});
+          }}>show person
+          </button>
           <Cockpit
               showTitle={this.props.title}
               showPersons={this.state.showPersons}
               persons={this.state.persons}
               clicked={this.togglePersonsHandler}/>
           {persons}
-        </WithClass>
+        </Aux>
     );
     // return React.createElement('div', {className: 'App'},
     // React.createElement('h1', null, 'Does this work now?'));
   }
 }
 
-export default App;
+export default withClass(App, classesCss.App);
