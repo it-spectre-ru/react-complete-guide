@@ -16,6 +16,9 @@ class App extends PureComponent {
         {id: 'vasdf1', name: 'awre', age: 29},
         {id: 'asdf11', name: 'alxer', age: 26},
       ],
+      otherState: 'some other value',
+      showPersons: false,
+      toggleClicked: 0
     }
   }
 
@@ -79,7 +82,12 @@ class App extends PureComponent {
 
   togglePersonsHandler = () => {
     const doesShow = this.state.showPersons;
-    this.setState({showPersons: !doesShow});
+    this.setState( (prevState, props) => {
+      return {
+        showPersons: !doesShow,
+        toggleClicked: prevState.toggleClicked + 1
+      }
+    });
   };
 
   render() {
