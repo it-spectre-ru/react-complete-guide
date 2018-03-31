@@ -21,7 +21,7 @@ const cockpit = (props) => {
   return (
       <Aux>
         <h1>{props.showTitle}</h1>,
-        <p className={classes.join(' ')}>This is really working!</p>,
+        <p className={classes.join(' ')}>This is really working!</p>
         <button
             className={btnClass}
             onClick={props.clicked}>Toggle Persons
