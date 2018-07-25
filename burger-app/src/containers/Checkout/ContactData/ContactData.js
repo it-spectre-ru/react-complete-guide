@@ -80,17 +80,12 @@ class ContactData extends Component {
         elementType: 'select',
         elementConfig: {
           option: [
-            {
-              value: 'fastest',
-              displayValue: 'Fastest'
-            },
-            {
-              value: 'cheapest',
-              displayValue: 'Cheapest'
-            }
+            {value: 'fastest',displayValue: 'Fastest'},
+            {value: 'cheapest',displayValue: 'Cheapest'}
           ]
         },
-        value: '',
+        value: '', /*in ui we will see fastest/fastest but if never switch options behind empty strings*/
+        validation: {},
         valid: true
       },
     },
