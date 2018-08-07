@@ -10,7 +10,6 @@ const deleteResult = (state, action) => {
   return updateObject(state, {results: updatedArray});
 };
 
-
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.STORE_RESULT:
