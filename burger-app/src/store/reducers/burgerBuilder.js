@@ -37,7 +37,12 @@ const reducer = (state = initialState, action) => {
     case actionTypes.SET_INGREDIENTS:
       return {
         ...state,
-        ingredients: action.ingredients, // we have set ingredients action/burgerBuilder.js -> setIngredients (ingredients) do past property
+        ingredients: {
+          salad: action.ingredients.salad,
+          bacon: action.ingredients.bacon,
+          cheese: action.ingredients.cheese,
+          meat: action.ingredients.meat
+        },
         error: false
       };
     case actionTypes.FETCH_INGREDIENTS_FAILED:
